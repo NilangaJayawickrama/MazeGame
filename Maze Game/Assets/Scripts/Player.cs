@@ -135,7 +135,14 @@ public class Player : MonoBehaviour
         modelTrans.gameObject.SetActive(true);
     }
 
-
-
+    // Remove Box Collider component
+    void RemoveBoxCollider(GameObject gameObject)
+    {
+        BoxCollider collider = gameObject.GetComponent<BoxCollider>();
+        if (collider != null)
+        {
+            Destroy(collider);
+        }
+    }
 
 }
