@@ -1,6 +1,7 @@
-using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -30,6 +31,8 @@ public class Player : MonoBehaviour
     public float reverseMomentumMultiplier = 2.2f;
 
     private Vector3 movementVelocity = Vector3.zero;
+
+    private bool paused = false;
 
     //Dashing
     [Header("Dashing")]
@@ -130,11 +133,31 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void Pausing()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            //Toggle pause status:
+            paused = !paused;
+            //If we're now paused, set timeScale to 0:
+            if (paused)
+                Time.timeScale = 0;
+            //Otherwise if we're no longer paused, revert timeScale to 1:
+            else
+                Time.timeScale = 1;
+        }
+    }
+
+
     // Call the Movement method in the Update method
     private void Update()
     {
-        Movement();
-        Dashing();
+        if (!paused)
+        {
+            Movement();
+            Dashing();
+        }
+        Pausing();
     }
 
     // Death and Respawning Variables
@@ -179,6 +202,34 @@ public class Player : MonoBehaviour
         else //If dashing
         {
             characterController.Move(dashDirection * (dashDistance / dashTime) * Time.deltaTime);
+        }
+    }
+
+    void OnGUI()
+    {
+        if (paused)
+        {
+            float boxWidth = Screen.width * .4f;
+            float boxHeight = Screen.height * .4f;
+            GUILayout.BeginArea(new Rect(
+                (Screen.width * .5f) - (boxWidth * .5f),
+                (Screen.height * .5f) - (boxHeight * .5f),
+                boxWidth,
+                boxHeight));
+
+            if (GUILayout.Button("RESUME GAME", GUILayout.Height(boxHeight * .5f)))
+            {
+                paused = false;
+                Time.timeScale = 1;
+            }
+
+            if (GUILayout.Button("RETURN TO MAIN MENU", GUILayout.Height(boxHeight * .5f)))
+            {
+                Time.timeScale = 1;
+                SceneManager.LoadScene(0);
+            }
+
+            GUILayout.EndArea();
         }
     }
 
