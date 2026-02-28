@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
   spawnPoint: {fileID: 4255770495661613531}
-  projectilePrefab: {fileID: 0}
+  projectilePrefab: {fileID: 2253341915585482418, guid: 93f0bbd9a4baf6d4e8146704c890abdf, type: 3}
   fireRate: 1
 --- !u!1 &5533438420657634904
 GameObject:
