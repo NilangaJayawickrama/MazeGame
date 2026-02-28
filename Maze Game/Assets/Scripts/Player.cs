@@ -9,6 +9,7 @@ public class Player : MonoBehaviour
     public Transform trans;
     public Transform modelTrans;
     public CharacterController characterController;
+    public GameObject cam;
 
     // Movement
     [Header("Movement")]
