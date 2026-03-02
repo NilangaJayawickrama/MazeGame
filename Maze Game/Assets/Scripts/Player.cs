@@ -141,10 +141,16 @@ public class Player : MonoBehaviour
             paused = !paused;
             //If we're now paused, set timeScale to 0:
             if (paused)
+            {
                 Time.timeScale = 0;
+                SoundManager.instance.ChangeBackgroundMusic(SoundManager.instance.pauseMusic);
+            }
             //Otherwise if we're no longer paused, revert timeScale to 1:
             else
+            {
                 Time.timeScale = 1;
+                SoundManager.instance.ChangeBackgroundMusic(SoundManager.instance.backgroundMusic);
+            }
         }
     }
 
@@ -169,6 +175,7 @@ public class Player : MonoBehaviour
 
     void Start()
     {
+        SoundManager.instance.PlaySound(SoundManager.instance.startSound, true);
         spawnPoint = transform.position;
     }
 
@@ -244,6 +251,8 @@ public class Player : MonoBehaviour
             characterController.enabled = false;
             modelTrans.gameObject.SetActive(false);
             dashBeginTime = Mathf.NegativeInfinity;
+            SoundManager.instance.PlaySound(SoundManager.instance.collisionSound);
+            SoundManager.instance.PlaySound(SoundManager.instance.deathSound, true);
         }
     }
 
@@ -254,6 +263,7 @@ public class Player : MonoBehaviour
         enabled = true;
         characterController.enabled = true;
         modelTrans.gameObject.SetActive(true);
+        SoundManager.instance.PlaySound(SoundManager.instance.restartSound, true);
     }
 
     // Remove Box Collider component
