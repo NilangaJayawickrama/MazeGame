@@ -67,7 +67,7 @@ public class LevelSelectUI : MonoBehaviour
 
     void OnGUI()
     {
-        GUILayout.Label("DEADLY CORRIDORS - Navigating Hazardous Mazes");
+        GUILayout.Label("Maze of Shadows - Navigating Hazardous Mazes");
 
         //If this isn't the main menu:
         if (currentScene != 0)
