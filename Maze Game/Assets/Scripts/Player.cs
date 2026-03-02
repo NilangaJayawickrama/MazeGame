@@ -228,6 +228,7 @@ public class Player : MonoBehaviour
             {
                 paused = false;
                 Time.timeScale = 1;
+                SoundManager.instance.ChangeBackgroundMusic(SoundManager.instance.backgroundMusic);
             }
 
             if (GUILayout.Button("RETURN TO MAIN MENU", GUILayout.Height(boxHeight * .5f)))
