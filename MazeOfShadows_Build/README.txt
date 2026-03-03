@@ -1,8 +1,6 @@
 Maze of Shadows
 
-Developer
-
-Nilanga Prabhath Jayawickrama
+Developer: Nilanga Prabhath Jayawickrama
 Student ID: 2141198
 GitHub: https://github.com/NilangaJayawickrama/MazeGame.git
 

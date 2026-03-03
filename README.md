@@ -2,15 +2,11 @@
 
 
 
-### Developer
+**Developer:**  Nilanga Prabhath Jayawickrama
 
+**Student ID:** 2141198
 
-
-Nilanga Prabhath Jayawickrama
-
-Student ID: 2141198
-
-GitHub: https://github.com/NilangaJayawickrama/MazeGame.git
+**GitHub:** https://github.com/NilangaJayawickrama/MazeGame.git
 
 
 
@@ -191,6 +187,4 @@ Respawn sound
 
 
 Audio persists correctly between scene transitions.
-
-
 
