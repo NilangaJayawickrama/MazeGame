@@ -4,10 +4,6 @@
 
 **Developer:**  Nilanga Prabhath Jayawickrama
 
-**Student ID:** 2141198
-
-**GitHub:** https://github.com/NilangaJayawickrama/MazeGame.git
-
 
 
 ### 1\. System Requirements
