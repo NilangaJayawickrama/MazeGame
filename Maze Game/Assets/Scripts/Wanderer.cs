@@ -76,7 +76,7 @@ public class Wanderer : MonoBehaviour
             // Measure the time we've spent rotating so far, in seconds:
             float timeSpentRotating = Time.time - rotationStartTime;
             // Rotate from initialRotation towards targetRotation:
-            modelTrans.rotation = Quaternion.Slerp(initialRotation, targetRotation, timeSpentRotating / rotationTime); // Quaternion -> rotation method
+            modelTrans.rotation = Quaternion.Slerp(initialRotation, targetRotation, timeSpentRotating / rotationTime);
         }
     }
 

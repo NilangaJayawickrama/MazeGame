@@ -16,6 +16,7 @@ public class Shooting : MonoBehaviour
         if (Time.time >= lastFireTime + fireRate)
         {
             lastFireTime = Time.time;
+            //Create a copy of the object during run time
             Instantiate(projectilePrefab, spawnPoint.position, spawnPoint.rotation);
         }
     }

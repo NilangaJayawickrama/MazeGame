@@ -170,6 +170,7 @@ MonoBehaviour:
   trans: {fileID: 138102103095025536}
   modelTrans: {fileID: 466471038363126476}
   characterController: {fileID: 3478998347228659139}
+  cam: {fileID: 8483835363190728077}
   movespeed: 24
   timeToMaxSpeed: 0.26
   timeToLoseMaxSpeed: 0.2
@@ -178,3 +179,8 @@ MonoBehaviour:
   dashTime: 0.26
   dashCooldown: 1.8
   respawnWaitTime: 2
+--- !u!1 &8483835363190728077 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6310071519490973977, guid: 239da44df6c0d684385a3fdf38429245, type: 3}
+  m_PrefabInstance: {fileID: 2462699119549924500}
+  m_PrefabAsset: {fileID: 0}

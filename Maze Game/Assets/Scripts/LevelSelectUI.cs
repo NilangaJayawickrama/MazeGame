@@ -78,14 +78,12 @@ public class LevelSelectUI : MonoBehaviour
             if (GUILayout.Button("PLAY"))
             {
                 //If the button is clicked, start playing the level:
-                //SoundManager.instance.ChangeBackgroundMusic(SoundManager.instance.backgroundMusic);
                 PlayCurrentLevel();
             }
         }
         else //If this is the main menu
         {
             GUILayout.Label("Select a level to preview it.");
-            //SoundManager.instance.ChangeBackgroundMusic(SoundManager.instance.pauseMusic);
         }
 
         //Starting at scene build index 1, loop through the remaining scene indexes:

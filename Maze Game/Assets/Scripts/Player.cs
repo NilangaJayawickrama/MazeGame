@@ -181,9 +181,9 @@ public class Player : MonoBehaviour
 
     private void Dashing()
     {
-        if (!IsDashing && CanDashNow) //If not dashing right now
+        if (!IsDashing) //If not dashing right now
         {
-            if (Input.GetKey(KeyCode.Space)) //If space key is pressed
+            if (CanDashNow && Input.GetKey(KeyCode.Space)) //If space key is pressed
             {
                 Vector3 movementDir = Vector3.zero;
 

@@ -21,15 +21,4 @@ public class WanderRegion: MonoBehaviour
             wanderers[i].region = this;
         }
     }
-
-    void Start()
-    {
-        
-    }
-
-
-    void Update()
-    {
-        
-    }
 }
